@@ -3,14 +3,16 @@ import { defineTokens } from '@pandacss/dev'
 // NOTE: Primitive tokens. Components never use these directly: they go through the semantic tokens.
 export const tokens = defineTokens({
   colors: {
-    paper: { value: '#F4F1EA' },
+    // NOTE: Written in OKLCH (lightness, chroma, hue), so a lighter or darker shade only changes the first number.
+    // The hex each one was taken from is in the comment.
+    paper: { value: 'oklch(95.85% 0.0098 87.47)' }, // #F4F1EA
     // NOTE: Paper moved 50% towards white. The inside of form controls.
-    paperLight: { value: 'color-mix(in srgb, #F4F1EA 50%, white)' },
-    ink: { value: '#17130E' },
-    red: { value: '#C2321D' },
-    redDeep: { value: '#9A2614' },
-    cyan: { value: 'oklch(0.72 0.11 210)' },
-    magenta: { value: 'oklch(0.72 0.11 340)' },
+    paperLight: { value: 'oklch(97.93% 0.0049 87.45)' }, // #F9F8F5
+    ink: { value: 'oklch(18.98% 0.0117 73.2)' }, // #17130E
+    red: { value: 'oklch(53.86% 0.1839 31.42)' }, // #C2321D
+    redDeep: { value: 'oklch(45.43% 0.1549 31.7)' }, // #9A2614
+    cyan: { value: 'oklch(72% 0.11 210)' },
+    magenta: { value: 'oklch(72% 0.11 340)' },
     transparent: { value: 'transparent' },
     currentColor: { value: 'currentColor' },
   },
