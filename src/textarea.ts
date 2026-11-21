@@ -5,19 +5,16 @@ import { css, cx } from '@etherfield/ui/css'
 // restyled with Panda tokens. See LICENSE for the original copyright notice.
 import { Textarea as Primitive } from '@foldkit/ui'
 
-import { controlClass, wrapperClass } from './control'
+import { controlRecipe, type Size, wrapperClass } from './control'
 
 // NOTE: Grows with its content between textareaMin and textareaMax, then scrolls.
-const textareaClass = cx(
-  controlClass,
-  css({
-    fieldSizing: 'content',
-    resize: 'none',
-    minHeight: 'textareaMin',
-    maxHeight: 'textareaMax',
-    paddingBlock: '2',
-  }),
-)
+const textareaClass = css({
+  fieldSizing: 'content',
+  resize: 'none',
+  minHeight: 'textareaMin',
+  maxHeight: 'textareaMax',
+  paddingBlock: '2',
+})
 
 export type Props<Message> = Readonly<{
   id: string
@@ -33,6 +30,9 @@ export type Props<Message> = Readonly<{
   invalid?: boolean
   required?: boolean
   maxLength?: number
+  size?: Size
+  /** Sharp (default) or rounded. A pill doesn't suit a box that grows. */
+  radius?: 'sharp' | 'rounded'
   /** For a textarea without a visible label. Inside a Field, the label names it. */
   label?: string
   attributes?: ReadonlyArray<TextareaAttribute<Message>>
@@ -61,7 +61,15 @@ export const view = <Message>(
           [
             h.textarea([
               ...textarea,
-              h.Class(textareaClass),
+              h.Class(
+                cx(
+                  controlRecipe({
+                    size: props.size ?? 'default',
+                    radius: props.radius ?? 'sharp',
+                  }),
+                  textareaClass,
+                ),
+              ),
               h.DataAttribute('slot', 'textarea'),
               ...(props.describedBy
                 ? [h.AriaDescribedBy(props.describedBy)]

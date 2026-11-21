@@ -4,6 +4,8 @@ import { defineTokens } from '@pandacss/dev'
 export const tokens = defineTokens({
   colors: {
     paper: { value: '#F4F1EA' },
+    // NOTE: Paper moved 50% towards white. The inside of form controls.
+    paperLight: { value: 'color-mix(in srgb, #F4F1EA 50%, white)' },
     ink: { value: '#17130E' },
     red: { value: '#C2321D' },
     redDeep: { value: '#9A2614' },
@@ -61,7 +63,15 @@ export const tokens = defineTokens({
     misregisterY: { value: '1.2px' },
     misregisterXReverse: { value: '-0.5px' },
     misregisterYReverse: { value: '-1.2px' },
+    // NOTE: Room inside a control for a leading icon (inset + icon + gap), and for the number stepper's buttons.
+    iconInset: { value: '2.25rem' },
+    iconInsetCompact: { value: '1.75rem' },
+    stepperInset: { value: '4rem' },
+    stepperInsetCompact: { value: '3.25rem' },
+    // NOTE: Top and bottom padding that centres a file input's text in a control-height box.
+    fileInset: { value: '0.4375rem' },
     0: { value: '0' },
+    0.5: { value: '0.125rem' },
     1: { value: '0.25rem' },
     2: { value: '0.5rem' },
     3: { value: '0.75rem' },
@@ -75,11 +85,18 @@ export const tokens = defineTokens({
     focusLine: { value: '2px' },
     control: { value: '2.25rem' },
     controlCompact: { value: '1.75rem' },
+    // NOTE: The number stepper's + and - buttons.
+    stepButton: { value: '1.75rem' },
+    stepButtonCompact: { value: '1.5rem' },
     // NOTE: Textarea grows with its content between these heights.
     textareaMin: { value: '4.75rem' },
     textareaMax: { value: '13.5rem' },
     // NOTE: The small red square in front of a field's error message.
-    errorMarker: { value: '0.375rem' },
+    // NOTE: Icon sizes. md matches body text; sm sits inside compact controls.
+    iconSm: { value: '0.875rem' },
+    iconMd: { value: '1rem' },
+    iconLg: { value: '1.25rem' },
+    iconXl: { value: '1.5rem' },
     0: { value: '0' },
     prose: { value: '48rem' },
     full: { value: '100%' },
@@ -88,6 +105,7 @@ export const tokens = defineTokens({
   radii: {
     none: { value: '0' },
     sm: { value: '2px' },
+    pill: { value: '9999px' },
   },
   borderWidths: {
     thin: { value: '1px' },

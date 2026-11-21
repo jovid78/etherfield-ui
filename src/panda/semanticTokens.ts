@@ -5,6 +5,7 @@ export const semanticTokens = defineSemanticTokens({
   colors: {
     bg: {
       canvas: { value: '{colors.paper}' },
+      field: { value: '{colors.paperLight}' },
       inverse: { value: '{colors.ink}' },
       accent: { value: '{colors.red}' },
       accentPressed: { value: '{colors.redDeep}' },

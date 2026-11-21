@@ -21,6 +21,7 @@
     "./input": "./src/input.ts",
     "./field": "./src/field.ts",
     "./textarea": "./src/textarea.ts",
+    "./icon": "./src/icon.ts",
     "./package.json": "./package.json",
     "./panda/*": "./dist/panda/*",
     "./css": {
@@ -56,6 +57,7 @@
     "prepare": "panda codegen --silent && panda lib",
     "typecheck": "panda codegen --silent && tsc --noEmit",
     "lint": "oxlint src",
+    "icons": "node scripts/icons.ts",
     "format": "oxfmt"
   },
   "peerDependencies": {
@@ -77,6 +79,7 @@
     "@pandacss/preset-base": "2.5.0",
     "effect": "4.1.4",
     "foldkit": "0.171.0",
+    "iconoir": "7.12.2",
     "oxfmt": "0.79.0",
     "oxlint": "1.85.0",
     "typescript": "7.0.2"
