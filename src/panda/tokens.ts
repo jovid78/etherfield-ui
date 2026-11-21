@@ -105,6 +105,8 @@ export const tokens = defineTokens({
   radii: {
     none: { value: '0' },
     sm: { value: '2px' },
+    // NOTE: A control's rounded corners. sm is too small to read on a 36px box.
+    md: { value: '8px' },
     pill: { value: '9999px' },
   },
   borderWidths: {

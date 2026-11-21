@@ -62,7 +62,7 @@ export const controlRecipe = cva({
     },
     radius: {
       sharp: { borderRadius: 'none' },
-      rounded: { borderRadius: 'sm' },
+      rounded: { borderRadius: 'md' },
       pill: { borderRadius: 'pill' },
     },
   },
