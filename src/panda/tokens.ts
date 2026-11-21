@@ -72,6 +72,9 @@ export const tokens = defineTokens({
     stepperInsetCompact: { value: '3.25rem' },
     // NOTE: Top and bottom padding that centres a file input's text in a control-height box.
     fileInset: { value: '0.4375rem' },
+    // NOTE: How far a switch's thumb slides: the track's inside width less the thumb and its 2px inset on each side.
+    switchTravel: { value: '0.875rem' },
+    switchTravelCompact: { value: '0.75rem' },
     0: { value: '0' },
     0.5: { value: '0.125rem' },
     1: { value: '0.25rem' },
@@ -94,6 +97,17 @@ export const tokens = defineTokens({
     textareaMin: { value: '4.75rem' },
     textareaMax: { value: '13.5rem' },
     // NOTE: The small red square in front of a field's error message.
+    // NOTE: Choice controls. A checkbox's or radio's box, a radio's dot, and a switch's track and thumb.
+    choice: { value: '1rem' },
+    choiceCompact: { value: '0.875rem' },
+    radioDot: { value: '0.375rem' },
+    radioDotCompact: { value: '0.3125rem' },
+    switchWidth: { value: '2.125rem' },
+    switchHeight: { value: '1.25rem' },
+    switchWidthCompact: { value: '1.75rem' },
+    switchHeightCompact: { value: '1rem' },
+    switchThumb: { value: '0.875rem' },
+    switchThumbCompact: { value: '0.625rem' },
     // NOTE: Icon sizes. md matches body text; sm sits inside compact controls.
     iconSm: { value: '0.875rem' },
     iconMd: { value: '1rem' },
@@ -116,6 +130,8 @@ export const tokens = defineTokens({
     thick: { value: '2px' },
   },
   durations: {
+    // NOTE: For prefers-reduced-motion: the change happens at once.
+    instant: { value: '0s' },
     fast: { value: '80ms' },
     normal: { value: '180ms' },
   },

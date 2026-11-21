@@ -1,4 +1,4 @@
-import type { Attribute, Html, HtmlBuilder } from 'foldkit/html'
+import type { Attribute, ChildAttribute, Html, HtmlBuilder } from 'foldkit/html'
 
 // Ported from fluid-functionalism-foldkit (https://github.com/timhanlon/fluid-functionalism-foldkit), MIT,
 // restyled with Panda tokens. See LICENSE for the original copyright notice.
@@ -275,7 +275,8 @@ export type SetProps<Message> = Readonly<{
   /** Disables every control inside, natively. */
   disabled?: boolean
   children: ReadonlyArray<Html>
-  attributes?: ReadonlyArray<Attribute<Message>>
+  /** Also takes a Foldkit UI primitive's group attributes, so RadioGroup can make the fieldset its radiogroup. */
+  attributes?: ReadonlyArray<Attribute<Message> | ChildAttribute>
 }>
 
 /** A <fieldset> with its <legend>: groups related fields under one title. */

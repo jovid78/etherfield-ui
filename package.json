@@ -22,6 +22,10 @@
     "./field": "./src/field.ts",
     "./textarea": "./src/textarea.ts",
     "./icon": "./src/icon.ts",
+    "./checkbox": "./src/checkbox.ts",
+    "./checkbox-group": "./src/checkbox-group.ts",
+    "./switch": "./src/switch.ts",
+    "./radio-group": "./src/radio-group.ts",
     "./package.json": "./package.json",
     "./panda/*": "./dist/panda/*",
     "./css": {
