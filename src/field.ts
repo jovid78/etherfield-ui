@@ -101,6 +101,7 @@ const fieldRecipe = sva({
   },
 })
 
+export const labelId = (id: string): string => `${id}-label`
 export const descriptionId = (id: string): string => `${id}-description`
 export const errorId = (id: string): string => `${id}-error`
 
@@ -142,7 +143,7 @@ export const view = <Message>(
   const classes = fieldRecipe({ orientation, size, invalid, disabled })
 
   const label = h.label(
-    [h.Class(classes.label), h.For(props.id), h.Id(`${props.id}-label`)],
+    [h.Class(classes.label), h.For(props.id), h.Id(labelId(props.id))],
     [props.label],
   )
   const control = props.control({

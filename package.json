@@ -26,6 +26,7 @@
     "./checkbox-group": "./src/checkbox-group.ts",
     "./switch": "./src/switch.ts",
     "./radio-group": "./src/radio-group.ts",
+    "./select": "./src/select.ts",
     "./package.json": "./package.json",
     "./panda/*": "./dist/panda/*",
     "./css": {

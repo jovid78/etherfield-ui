@@ -39,6 +39,10 @@ export const semanticTokens = defineSemanticTokens({
     },
   },
   shadows: {
+    // NOTE: A popup's shadow: a hard offset in faint ink, like a sheet of paper lying on the page.
+    popup: {
+      value: '3px 3px 0 0 color-mix(in oklab, {colors.ink} 18%, transparent)',
+    },
     // NOTE: The soft glow under the focus underline.
     focusGlow: {
       value: '0 2px 10px 0 color-mix(in oklab, {colors.red} 55%, transparent)',
