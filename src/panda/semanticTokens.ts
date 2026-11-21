@@ -21,10 +21,12 @@ export const semanticTokens = defineSemanticTokens({
       muted: { value: 'color-mix(in oklab, {colors.ink} 60%, {colors.paper})' },
       inverse: { value: '{colors.paper}' },
       accent: { value: '{colors.red}' },
+      error: { value: '{colors.red}' },
     },
     border: {
       default: { value: '{colors.ink}' },
       subtle: { value: 'color-mix(in oklab, {colors.ink} 20%, transparent)' },
+      error: { value: '{colors.red}' },
     },
     focus: {
       ring: { value: '{colors.red}' },

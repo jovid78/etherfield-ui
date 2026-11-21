@@ -53,6 +53,9 @@ export const tokens = defineTokens({
     // NOTE: Where the focus underline sits: its bottom edge, measured from the element's padding box. 1px border +
     // 2px gap + 2px line.
     focusOffset: { value: '-5px' },
+    // NOTE: The same underline for a control wrapped in a box without a border (Input, Textarea): the border is
+    // inside the box, so the offset is 1px less. 2px gap + 2px line.
+    focusOffsetOuter: { value: '-4px' },
     // NOTE: Misregister: how far the cyan and magenta copies of a heading are shifted. Magenta goes the opposite way.
     misregisterX: { value: '0.5px' },
     misregisterY: { value: '1.2px' },
@@ -72,6 +75,12 @@ export const tokens = defineTokens({
     focusLine: { value: '2px' },
     control: { value: '2.25rem' },
     controlCompact: { value: '1.75rem' },
+    // NOTE: Textarea grows with its content between these heights.
+    textareaMin: { value: '4.75rem' },
+    textareaMax: { value: '13.5rem' },
+    // NOTE: The small red square in front of a field's error message.
+    errorMarker: { value: '0.375rem' },
+    0: { value: '0' },
     prose: { value: '48rem' },
     full: { value: '100%' },
     fit: { value: 'fit-content' },

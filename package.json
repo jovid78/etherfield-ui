@@ -18,6 +18,9 @@
     "./fonts.css": "./src/fonts.css",
     "./button": "./src/button.ts",
     "./heading": "./src/heading.ts",
+    "./input": "./src/input.ts",
+    "./field": "./src/field.ts",
+    "./textarea": "./src/textarea.ts",
     "./package.json": "./package.json",
     "./panda/*": "./dist/panda/*",
     "./css": {
