@@ -93,6 +93,13 @@ export const tokens = defineTokens({
     // NOTE: Textarea grows with its content between these heights.
     textareaMin: { value: '4.75rem' },
     textareaMax: { value: '13.5rem' },
+    // NOTE: Select's trigger never gets narrower than this, so a short value doesn't make a stubby box.
+    selectMin: { value: '10rem' },
+    selectMinCompact: { value: '8rem' },
+    // NOTE: Keeps a popup inside the viewport, 0.5rem from each edge.
+    popupMax: { value: 'calc(100vw - 1rem)' },
+    // NOTE: A popup list taller than this scrolls.
+    popupListMax: { value: '18.75rem' },
     // NOTE: The small red square in front of a field's error message.
     // NOTE: Icon sizes. md matches body text; sm sits inside compact controls.
     iconSm: { value: '0.875rem' },
@@ -130,5 +137,9 @@ export const tokens = defineTokens({
   },
   zIndex: {
     behind: { value: '-1' },
+    // NOTE: Floating elements (Select's list, later Dropdown and Tooltip) sit above the page. The backdrop that
+    // catches outside clicks sits just below its popup.
+    popupBackdrop: { value: '49' },
+    popup: { value: '50' },
   },
 })
